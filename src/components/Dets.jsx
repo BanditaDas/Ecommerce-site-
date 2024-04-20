@@ -30,10 +30,17 @@ function Dets() {
     // getpro()
   },[])
 
-  const proddelhan = ()=>{
-    const filterproduct = products.filter(p => p.id != id)
+  // const proddelhan = ()=>{
+  //   const filterproduct = products.filter(p => p.id != id)
+  //   setproducts(filterproduct)
+  //   localStorage.setItem("products", JSON.stringify(filterproduct))
+  //   navigate(-1)
+  // }
+
+  const proddelhan = async () => {
+    const filterproduct = await products.filter(p => p.id != id)
     setproducts(filterproduct)
-    localStorage.setItem("products", JSON.stringify(filterproduct))
+    localStorage.setItem("products", JSON.stringify(filterproduct)) // after setItem, add a statement to console log `products` from localStorage; Like .getItem(...)
     navigate(-1)
   }
 
