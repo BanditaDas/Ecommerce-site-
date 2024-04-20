@@ -24,6 +24,8 @@ function Home() {
     }
   }
 
+  console.log(product);
+
   useEffect(()=>{
     if (!filterpro || category == "undefined") setfilterpro(product)
     if (category != "undefined") {
