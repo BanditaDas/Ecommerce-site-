@@ -34,7 +34,7 @@ function Dets() {
     const filterproduct = products.filter(p => p.id != id)
     setproducts(filterproduct)
     localStorage.setItem("products", JSON.stringify(filterproduct))
-    navigate("/")
+    navigate(-1)
   }
 
   return (pro ?(
